@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.5.
 
 ## Node and NPM Versions
-`Node Version:` 16.13.1 | `Npm:` 8.1.2
+`Node:` 16.13.1 | `Npm:` 8.1.2 | `SCSS is enabled`
 
 ## Development server
 
