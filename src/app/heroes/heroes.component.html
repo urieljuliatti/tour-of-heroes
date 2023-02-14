@@ -1,3 +1,4 @@
+<!-- componente pai -->
 <h2>My Heroes</h2>
 <ul class="heroes">
   <li
@@ -9,17 +10,7 @@
 </ul>
 
 <hr />
-<div *ngIf="selectedHero">
-  <h2>{{ selectedHero.name | uppercase }} Details</h2>
-  <div>
-    <span> <b>id:</b> </span> {{ selectedHero.id }}
-  </div>
-  <div>
-    <span> <b>name:</b> </span> {{ selectedHero.name }}
-  </div>
-  <br />
-  <div>
-    <label for="name">Hero name: </label>
-    <input id="name" [(ngModel)]="selectedHero.name" placeholder="name" type="text">
-  </div>
-</div>
+
+<!-- [hero] é a variável setada no hero-detail.component.ts através do @Input() -->
+<!-- componente filho -->
+<app-hero-detail [hero]="selectedHero"></app-hero-detail>
