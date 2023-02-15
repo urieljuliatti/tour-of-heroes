@@ -7,9 +7,10 @@ import { FormsModule } from '@angular/forms';
 import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
 import { MessagesComponent } from './messages/messages.component';
 @NgModule({
-  declarations: [	
+  declarations: [
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
@@ -19,7 +20,9 @@ import { MessagesComponent } from './messages/messages.component';
     BrowserModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
