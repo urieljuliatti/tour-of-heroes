@@ -11,6 +11,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MessagesComponent } from './messages/messages.component';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
+import { MatIconModule } from '@angular/material/icon';
+import { FlexLayoutModule } from '@angular/flex-layout';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +27,9 @@ import { AppRoutingModule } from './app-routing.module';
     MatToolbarModule,
     MatButtonModule,
     MatExpansionModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatIconModule,
+    FlexLayoutModule
 
   ],
   providers: [],
