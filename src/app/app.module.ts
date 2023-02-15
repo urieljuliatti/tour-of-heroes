@@ -16,8 +16,8 @@ import { AppRoutingModule } from './app-routing.module';
     AppComponent,
     HeroesComponent,
     HeroDetailComponent,
-      MessagesComponent
-   ],
+    MessagesComponent
+  ],
   imports: [
     BrowserModule,
     FormsModule,
