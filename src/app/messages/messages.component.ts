@@ -8,6 +8,8 @@ import { MessageService } from '../message.service';
 })
 export class MessagesComponent {
 
+  panelOpenState = false;
+
   // Injeção de dependência
   constructor(public messageService: MessageService) { }
 
