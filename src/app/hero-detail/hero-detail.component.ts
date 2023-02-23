@@ -1,5 +1,8 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Hero } from '../hero';
+import { HeroService } from '../hero.service';
+import { Location } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -8,8 +11,23 @@ import { Hero } from '../hero';
   styleUrls: ['./hero-detail.component.scss']
 })
 
-export class HeroDetailComponent {
-  // Decorator para injetar a variavel do outro componente (heroes.component.ts)
-  // Assim sendo, a propriedade pode ser enxergada de fora
-  @Input() hero?: Hero;
+export class HeroDetailComponent implements OnInit {
+
+  hero!: Hero;
+
+  constructor(private heroService: HeroService,
+    private location: Location,
+    private route: ActivatedRoute) { }
+
+  ngOnInit(): void {
+    this.getHero();
+  }
+
+  getHero(): void {
+    const id = Number(this.route.snapshot.paramMap.get('id'));
+    this.heroService.getHero(id).subscribe((hero) => (this.hero = hero));
+  }
+  goBack(): void {
+    this.location.back();
+  }
 }
