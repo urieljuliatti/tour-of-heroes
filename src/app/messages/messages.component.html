@@ -1,5 +1,5 @@
-<div *ngIf="messageService.getMessages().length">
-  <mat-accordion>
+
+  <mat-accordion *ngIf="messageService.getMessages().length">
     <mat-expansion-panel>
       <mat-expansion-panel-header>
         <mat-panel-title>
@@ -9,12 +9,12 @@
          {{messageService.getMessages().length}} records
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngFor="let message of messageService.getMessages()">
-        {{message}}
-      </div>
+      <p><button (click)="messageService.clear()" color="warn" mat-raised-button>Clear Messages</button></p>
+      <mat-list>
+        <mat-list-item *ngFor="let message of messageService.getMessages()">
+          {{message}}
+        </mat-list-item>
+      </mat-list>
     </mat-expansion-panel>
+
   </mat-accordion>
-  <br />
-  <button (click)="messageService.clear()" color="warn" mat-raised-button>Clear Messages</button>
-  <hr />
-</div>

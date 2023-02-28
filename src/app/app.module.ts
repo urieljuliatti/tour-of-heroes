@@ -13,9 +13,10 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { AppRoutingModule } from './app-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import {MatCardModule} from '@angular/material/card';
+import { MatCardModule } from '@angular/material/card';
+import { MatListModule } from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     FlexLayoutModule,
     MatTooltipModule,
-    MatCardModule
+    MatCardModule,
+    MatListModule
 
   ],
   providers: [],
